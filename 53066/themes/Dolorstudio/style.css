@@ -1,0 +1,395 @@
+/*
+Theme Name: Dolor Studio
+Theme URI: https://wordpress.org/themes/twentyfifteen
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ==========================================================================
+   Grid System
+   ========================================================================== */
+
+.onepcssgrid-1000, .onepcssgrid-1200 {
+    margin: 0 auto;
+    padding: 0 0 0 1%; /* THAT'S THE NAME ;) */
+}
+
+.onepcssgrid-1200 {
+    max-width: 1220px;
+}
+
+.onepcssgrid-1000 {
+    max-width: 1020px;
+}
+
+.onerow {
+    clear: both;
+    padding: 0 10px;
+}
+
+
+
+
+
+/* *********************************************************************************************************************
+ * Common columns definitions
+ */
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+    float: left;
+    margin: 0 3% 0 0;
+}
+
+.col1.last, .col2.last, .col3.last, .col4.last, .col5.last, .col6.last, .col7.last, .col8.last, .col9.last, .col10.last, .col11.last, .col12 {
+    margin: 0;
+}
+
+.col1 { width: 5.5%; }
+.col2 { width: 14%; }
+.col3 { width: 22.5%; }
+.col4 { width: 31%; }
+.col5 { width: 39.5%; }
+.col6 { width: 48%; }
+.col7 { width: 56.5%; }
+.col8 { width: 65%; }
+.col9 { width: 73.5%; }
+.col10 { width: 82%; }
+.col11 { width: 90.5%; }
+.col12 { width: 99%; margin: 0; }
+
+.col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img, .col7 img, .col8 img, .col9 img, .col10 img, .col11 img, .col12 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+/* *********************************************************************************************************************
+ * Disable padding left/right 10px if I'm 1024 or gibber - correct percentage math
+ */
+@media all and (min-width: 1024px) {
+    .onepcssgrid-1000 {
+        max-width: 1000px;
+    }
+
+    .onepcssgrid-1000 .onerow {
+        padding: 0;
+    }
+}
+
+
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+/*  *zoom: 1;*/
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+body {
+  font-family: ProximaNova-Regular, "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #444;
+  background-color: #fff;
+ /* text-rendering: optimizeLegibility;*/
+}
+
+strong {
+  font-weight: 700;
+  font-size: 16px;
+  color: #444; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: 16px;
+  font-weight: 400; 
+}
+
+  .logo {
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    /*font-style: 600;*/
+  }
+
+h1 {
+    font-weight: 700;
+    color: #444;
+}
+
+h2 {
+  font-weight: 700;
+  color: #444;
+  margin: 0; 
+}
+
+h3 {
+  font-weight: 400;
+  color: #444;
+  margin: 0; }
+
+h4 {
+  font-weight: 400;
+  color: #444;
+  margin: 0; }
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #444;
+    transition: color .4s ease;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+article {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 3em 0;
+  clear: both;
+}
+
+  ul {
+  padding-bottom: 1em;
+}
+
+li::before {
+  content: "– ";
+}
+
+footer {
+  margin: 3em 0;
+}
+
+a .text-widget {margin-left: 3em;}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+header {
+    margin: 3em 0;
+    display: block;
+}
+
+
+.mainNav {
+    display: block;
+}
+
+.navLink {
+    display: block;
+    color: #999;
+    text-decoration: none;
+}
+
+.navLink a {
+  color: #999;
+  transition: color .4s ease;
+
+}
+
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+.wrap {
+  position:relative;
+  clear: none;
+  overflow:hidden;
+}
+  
+.wrap img {
+    position:relative;
+    z-index:1;  
+}
+
+.projectThumb {
+  position: relative;
+}*/
+
+.projectTitle {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+.projectThumb img:hover {
+  opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    transition: all .4s ease;
+}
+
+.projectTitle {
+  padding: .5em 0 1.5em 0;
+  font-weight: 400;
+}
+
+.projectRoles {
+    display: block;
+    color: #999;
+    text-decoration: none; 
+}
+
+.projectDescription {
+    padding-bottom: 3em;
+}
+
+.caption {
+  margin-left: 51%;
+  padding: .5em 0 3em 0;
+  color: #999;
+}
+
+#post p {
+  margin-left: 51%;
+  padding: 1.5em 0;
+}
+
+
+/* ==========================================================================
+   Info Page
+   ========================================================================== */
+
+#info p {
+  padding-bottom: 1.3em;
+}
+
+#info h4 {
+  color: #999;
+}
+
+#info .caption {
+  margin-left: 51%;
+  padding: .5em 0 3em 0;
+  color: #999;
+}
+
+.email {
+  margin-bottom: 3em;
+  color: #999;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* *********************************************************************************************************************
+ * Small devices
+ */
+@media all and (max-width: 768px) {
+    .onerow {
+    }
+
+    .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
+        float: none;
+        width: 99%;
+    
+    }
+}
+
+/* ~ 1140px Wide */
+/*@media all and (max-width: 72em) {
+  
+}*/
+
+/* ~ 640px Wide */
+@media all and (max-width: 40em) {
+
+  
+}
+
+.mainNav ul li::before {
+content: "";
+}
+
+.current-menu-item a
+{
+font-weight: 700;
+font-size: 16px;
+color: #444;
+}
+
+
+.navLink a:hover	{ color:#444;}	
+.single .onerow p         {margin-left:51%; padding:1.5em 0;}
+.page p {padding-bottom: 1.3em;}
+.page h4 {color: #999;}	
